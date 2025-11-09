@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Simon Memory Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Tam sayfayı kaplayan karşılama ekranı -->
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-hero">
+      <div class="intro-left">
+        <p class="intro-eyebrow">Memory · Pattern · Focus</p>
+        <h1 class="intro-title">Simon Memory</h1>
+        <p class="intro-subtitle">
+          Ortadaki renkli segmentlerin yandığı sırayı aklında tut ve aynısını tekrar et.
+          Her turda dizi uzar, hata yaptığında oyun biter. Ne kadar ileri gidebilirsin?
+        </p>
+
+        <ul class="intro-list">
+          <li>Segmentler sırayla yanar, aynı sırayla tıkla</li>
+          <li>Her level'da diziye 1 yeni renk eklenir</li>
+          <li>Skorun ve en yüksek skorun tarayıcıda saklanır</li>
+        </ul>
+
+        <div class="intro-actions">
+          <button id="start-btn" class="primary-btn">Oyuna Başla</button>
+          <span class="intro-hint">⏎ Enter veya Space ile de başlayabilirsin</span>
+        </div>
+      </div>
+
+      <div class="intro-right">
+        <div class="intro-board">
+          <div class="intro-row">
+            <div class="intro-cell intro-red"></div>
+            <div class="intro-cell intro-green"></div>
+          </div>
+          <div class="intro-row">
+            <div class="intro-cell intro-blue"></div>
+            <div class="intro-cell intro-yellow"></div>
+          </div>
+          <p class="intro-mini-copy">
+            Pattern’i takip et, ritmi kaçırma.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Üst header -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-text">Simon Memory</span>
+    </div>
+
+    <nav class="main-nav">
+      <a class="nav-link" href="#howto-section">Nasıl Oynanır?</a>
+      <a class="nav-link" href="#stats-section">Skorlar</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tam ekran oyun bölümü -->
+    <section class="game-hero" id="game-hero">
+      <div class="game-hero-inner">
+        <h2 id="level-title" class="level-title">Hazırsan başlayalım</h2>
+        <p class="level-subtitle">Renklerin yandığı sırayı hatırla ve tekrar et.</p>
+
+        <div class="simon-board">
+          <div id="red" class="btn segment red"></div>
+          <div id="green" class="btn segment green"></div>
+          <div id="blue" class="btn segment blue"></div>
+          <div id="yellow" class="btn segment yellow"></div>
+          <div class="simon-center-label">Simon</div>
+        </div>
+
+        <div class="game-hud">
+          <span class="quit-label">quit</span>
+          <div class="score-block">
+            <div>score: <span id="score-value">0</span></div>
+            <div>highest: <span id="high-score-value">0</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nasıl oynanır bölümü -->
+    <section id="howto-section" class="info-section">
+      <div class="info-inner">
+        <h3>Nasıl Oynanır?</h3>
+        <p>
+          Oyun başladığında Simon tahtasındaki renk segmentleri sırayla yanar. 
+          Önce Simon diziyi gösterir, sonra sıra sende:
+        </p>
+        <ul>
+          <li>Gösterilen sırayı aynı şekilde segmentlere tıklayarak tekrar et.</li>
+          <li>Her level sonunda dizinin sonuna yeni bir renk eklenir.</li>
+          <li>Yanlış renge tıklarsan oyun biter ve baştan başlarsın.</li>
+        </ul>
+        <p>
+          Kısaca: <strong>dikkat, ritim ve hafıza</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skor açıklama bölümü -->
+    <section id="stats-section" class="info-section">
+      <div class="info-inner">
+        <h3>Skor Sistemi</h3>
+        <p>
+          <strong>score</strong>, tamamladığın level sayısını temsil eder. 
+          Ne kadar uzun bir diziyi doğru hatırlarsan skorun o kadar artar.
+        </p>
+        <p>
+          <strong>highest</strong>, bugüne kadarki en yüksek skorundur ve 
+          tarayıcıda <code>localStorage</code> içinde saklanır. Sayfayı yenilesen bile 
+          rekorun kaybolmaz.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+</body>
+</html>
