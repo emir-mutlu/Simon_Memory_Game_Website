@@ -101,21 +101,6 @@ git clone https://github.com/<your_username>/simon-memory.git
 cd simon-memory
 Development Ideas
 
-This project is also a great playground for improvements:
 
-⏱️ Time Pressure Mode
-Add a timer for each step—when time runs out, trigger game over automatically.
 
-🔊 Sound Toggle
-Add a small icon to turn sounds on/off.
 
-🏆 Difficulty Levels
-
-Normal: current speed
-
-Hard: faster pattern display
-
-Zen: endless mode with no scoring
-
-🌐 Multi-language support
-Add a TR/EN toggle to switch the text content.
