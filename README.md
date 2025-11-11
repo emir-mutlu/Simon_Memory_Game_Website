@@ -99,9 +99,7 @@ This project is entirely static. No build process required.
 ```bash
 git clone https://github.com/<your_username>/simon-memory.git
 cd simon-memory
-Development Ideas
-
-
+```
 
 ### 2. Run
 
@@ -114,31 +112,30 @@ Or use a live server:
 python -m http.server 8000
 # or
 npx live-server
+```
 
+Then open your browser at:
+
+```text
 http://localhost:8000
+```
 
+---
 
-🧪 Development Ideas
+## 🧪 Development Ideas
 
 This project is also a great playground for improvements:
 
-⏱️ Time Pressure Mode
-Add a timer for each step — when time runs out, trigger game over automatically.
+- ⏱️ **Time Pressure Mode**  
+  Add a timer for each step — when time runs out, trigger game over automatically.
 
-🔊 Sound Toggle
-Add a small icon to turn sounds on/off.
+- 🔊 **Sound Toggle**  
+  Add a small icon to turn sounds on/off.
 
-🏆 Difficulty Levels
+- 🏆 **Difficulty Levels**  
+  - **Normal:** current speed  
+  - **Hard:** faster pattern display  
+  - **Zen:** endless mode with no scoring  
 
-Normal: current speed
-
-Hard: faster pattern display
-
-Zen: endless mode with no scoring
-
-🌐 Multi-language Support
-Add a TR/EN toggle to switch the text content.
-
-
-
-
+- 🌐 **Multi-language Support**  
+  Add a TR/EN toggle to switch the text content.
