@@ -1,7 +1,7 @@
 <h1 align="center">🧠 Simon Memory</h1>
 
 <p align="center">
-  <i>Renkleri takip et, pattern’i ezberle, hafızanın sınırlarını zorla.</i>
+  <i>Follow the colors, memorize the pattern, push the limits of your memory.</i>
 </p>
 
 <p align="center">
@@ -22,119 +22,100 @@
 
 ---
 
-## 🎮 Oyun Hakkında
+## 🎮 About the Game
 
-**Simon Memory**, klasik Simon oyununun modern, tam ekran ve “portfolio-friendly” bir web uyarlaması.
+**Simon Memory** is a modern, full-screen, and portfolio-friendly web adaptation of the classic Simon game.
 
-- Ortada **tam sayfayı dolduran 3D görünümlü yuvarlak Simon tahtası**
-- Koyu bir sahne üzerinde spotlight efekti ve arkada yüzen renkli ışıklar
-- Skor & en yüksek skor gösterimi (localStorage ile **kalıcı high score**)
-- Oyun başlamadan önce tam ekran **karşılama (intro) ekranı**
-- Altta retro tarzda `quit`, `score`, `highest` HUD tasarımı
+- A **3D-looking circular Simon board** that fills the entire page  
+- Dark scene with a spotlight effect and floating colorful lights in the background  
+- Score & high score display (persistent **high score via localStorage**)  
+- A **full-screen intro screen** before the game starts  
+- Retro-style HUD at the bottom with `quit`, `score`, and `highest` indicators  
 
-> Bu repo, hem JavaScript mantığını hem de modern UI / UX tasarımını göstermek için güzel bir örnek projedir.
-
----
-
-## ✨ Özellikler
-
-- 🌀 **Tam ekran Simon tahtası**  
-  Dört renkli segment, yuvarlak bir gövde ve ortada “Simon” yazısı ile tek parça bir oyun yüzeyi.
-
-- 💡 **Animasyonlu highlight & click efektleri**  
-  Sıra gösteriminde segmentler parlayarak yanıyor; tıklayınca daha parlak ve baskılı bir efekt oluşuyor.
-
-- 📈 **Skor & High Score sistemi**
-  - `score`: Tamamlanan level sayısı
-  - `highest`: Tarayıcıda saklanan en yüksek skor (localStorage)
-
-- 🎬 **Game Over sinematik efekti**
-  - Ekranda kırmızı bir patlama efekti
-  - Tahtada shake animasyonu
-  - Sonra karşılama ekranına “Tekrar Başla” metniyle dönüyor
-
-- 📱 **Responsive tasarım**
-  - Masaüstünde büyük, etkileyici görünüm
-  - Küçük ekranlarda otomatik ölçeklenen Simon tahtası ve HUD
-
-- 📖 **Nasıl Oynanır & Skorlar** bölümleri  
-  Sayfanın alt kısmında oyunun kuralları ve skor sistemi, header’daki linklerle ulaşılabilir.
+> This repo is a great example project that demonstrates both JavaScript logic and modern UI/UX design.
 
 ---
 
-## 🧩 Oynanış
+## ✨ Features
+
+- 🌀 **Full-screen Simon board**  
+  A single circular surface with four colored segments and “Simon” written at the center.
+
+- 💡 **Animated highlight & click effects**  
+  During the sequence, segments light up; on click, they glow brighter with a pressed effect.
+
+- 📈 **Score & High Score system**  
+  - `score`: Number of completed levels  
+  - `highest`: Highest score saved in the browser (via localStorage)
+
+- 🎬 **Cinematic Game Over effect**  
+  - Red explosion effect on the screen  
+  - Board shake animation  
+  - Returns to the intro screen with “Restart” text  
+
+- 📱 **Responsive design**  
+  - Large, impressive layout on desktop  
+  - Automatically scales Simon board and HUD for smaller screens  
+
+- 📖 **How to Play & Scores sections**  
+  Rules and score info available at the bottom of the page via header links.
+
+---
+
+## 🧩 Gameplay
 
 <p align="center">
   <img src="assets/simon-sequence.gif" alt="Simon Memory Sequence" width="480">
 </p>
 
-1. **Oyun başladığında** Simon tahtasındaki renk segmentleri sırayla yanar.
-2. Önce Simon diziyi gösterir, sonra sıra sende:
-   - Aynı sırayla segmentlere tıklayarak diziyi tekrar et.
-3. Doğru tamamlarsan:
-   - Bir sonraki level’da dizinin sonuna **yeni bir renk** eklenir.
-4. Yanlış renge tıklarsan:
-   - Oyun biter, kısa bir “game over” animasyonu oynar ve
-   - Intro ekranından yeniden başlayabilirsin.
-5. Amaç:
-   - Mümkün olan **en uzun diziyi** doğru hatırlayarak **high score’u zorlamak**.
+1. **When the game starts**, the colored segments light up in a sequence.  
+2. First, Simon shows the sequence, then it’s your turn:  
+   - Click the segments in the same order to repeat it.  
+3. If you complete it correctly:  
+   - A **new color** is added at the end of the sequence for the next level.  
+4. If you click the wrong color:  
+   - The game ends, a short “game over” animation plays, and  
+   - You can restart from the intro screen.  
+5. The goal:  
+   - Remember the **longest sequence** possible and **beat your high score**!
 
 ---
 
-## 🛠️ Teknolojiler
+## 🛠️ Technologies
 
-- **HTML5** – yapısal iskelet
-- **CSS3** – tam ekran layout, gradient arka plan, gölgeler, animasyonlar
-- **Vanilla JavaScript (ES6)** – oyun mantığı, skor takibi, animasyon tetikleme
-- **localStorage** – kalıcı high score saklama
+- **HTML5** – structural foundation  
+- **CSS3** – full-screen layout, gradient backgrounds, shadows, animations  
+- **Vanilla JavaScript (ES6)** – game logic, score tracking, animation triggering  
+- **localStorage** – persistent high score storage  
 
 ---
 
-## 🚀 Projeyi Çalıştırma
+## 🚀 Running the Project
 
-Bu proje tamamen statik dosyalardan oluşur. Ekstra build süreci yok.
+This project is entirely static. No build process required.
 
-### 1. Klonla
+### 1. Clone
 
 ```bash
-git clone https://github.com/<kullanıcı_adın>/simon-memory.git
+git clone https://github.com/<your_username>/simon-memory.git
 cd simon-memory
+Development Ideas
 
+This project is also a great playground for improvements:
 
+⏱️ Time Pressure Mode
+Add a timer for each step—when time runs out, trigger game over automatically.
 
-2. Çalıştır
+🔊 Sound Toggle
+Add a small icon to turn sounds on/off.
 
-index.html dosyasını bir tarayıcıda açman yeterli.
+🏆 Difficulty Levels
 
-İstersen bir canlı sunucu kullanabilirsin:
+Normal: current speed
 
-# Python 3 ile
-python -m http.server 8000
-# veya
-npx live-server
+Hard: faster pattern display
 
-Ardından tarayıcında şu adrese git:
+Zen: endless mode with no scoring
 
-http://localhost:8000
-
-
-🧪 Geliştirme Fikirleri
-
-Bu proje aynı zamanda geliştirilmeye açık bir playground:
-
-⏱️ Zaman baskısı modu
-Her adım için süre kısıtı koyup, süre dolunca otomatik game over.
-
-🔊 Ses/Kapama ayarı
-Ufak bir ikon ile sesleri aç/kapat.
-
-🏆 Farklı zorluk seviyeleri
-
-Normal: mevcut hız
-
-Hard: daha hızlı pattern gösterimi
-
-Zen: sadece skor yok, sonsuz pratik modu
-
-🌐 Çoklu dil desteği
-TR / EN toggle ile text içeriklerini değiştir.
+🌐 Multi-language support
+Add a TR/EN toggle to switch the text content.
