@@ -103,4 +103,42 @@ Development Ideas
 
 
 
+### 2. Run
+
+Open the `index.html` file directly in your browser.
+
+Or use a live server:
+
+```bash
+# With Python 3
+python -m http.server 8000
+# or
+npx live-server
+
+http://localhost:8000
+
+
+🧪 Development Ideas
+
+This project is also a great playground for improvements:
+
+⏱️ Time Pressure Mode
+Add a timer for each step — when time runs out, trigger game over automatically.
+
+🔊 Sound Toggle
+Add a small icon to turn sounds on/off.
+
+🏆 Difficulty Levels
+
+Normal: current speed
+
+Hard: faster pattern display
+
+Zen: endless mode with no scoring
+
+🌐 Multi-language Support
+Add a TR/EN toggle to switch the text content.
+
+
+
 
